@@ -1,0 +1,3 @@
+pet - Pet Dog Bot
+spare - Spare Dog Bot
+version - Check version of Dog Bot and what's new
