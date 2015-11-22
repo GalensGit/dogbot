@@ -1,3 +1,3 @@
-VERSION = 0.5
-NEW = 'Testing out photo sending.'
+VERSION = 0.8
+NEW = 'Fixed images and added \'spare\' command'
 

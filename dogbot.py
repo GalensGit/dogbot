@@ -1,4 +1,3 @@
-import time
 from config import *
 from version import *
 import telebot
@@ -179,7 +178,15 @@ def pet(message):
             message.chat.id,
             "Really..."
         )
-    
+
+
+@dog.message_handler(commands=['spare'])
+def version(message):
+    dog.send_message(
+        message.chat.id,
+        "Lesser Dog Found A Loving Owner."
+    )
+    dog.pets = 0
 
 
 @dog.message_handler(commands=['version'])
@@ -188,6 +195,7 @@ def version(message):
         message.chat.id,
         "Version: {0}\nWhat's New:{1}".format(VERSION, NEW)
     )
+
 
 dog.polling()
 
