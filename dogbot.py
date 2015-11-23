@@ -1,12 +1,16 @@
 import os
+import sys
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+IMG_DIR = BASE_DIR + '/images/'
+ENV = BASE_DIR + '/venv/lib/python' + sys.version[0:3] + '/site-packages'
+sys.path.insert(0, ENV)
 
 import telebot
 
 from config import TOKEN
 from version import VERSION, NEW
 
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-IMG_DIR = BASE_DIR + '/images/'
 
 class DogBot(telebot.TeleBot):
     excited = False
