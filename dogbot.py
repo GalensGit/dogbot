@@ -4,7 +4,9 @@ import sys
 import telebot
 
 from config import TOKEN
-from version import VERSION, NEW
+
+__version__ = 0.8
+NEW = 'Fixed images and added \'spare\' command'
 
 
 class DogBot(telebot.TeleBot):
@@ -198,9 +200,10 @@ def version(message):
 def version(message):
     DOG.send_message(
         message.chat.id,
-        "Version: {0}\nWhat's New:{1}".format(VERSION, NEW)
+        "Version: {0}\nWhat's New: {1}".format(__version__, NEW)
     )
 
 
 DOG.polling()
+
 
