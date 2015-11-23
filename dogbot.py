@@ -24,7 +24,7 @@ def send_welcome(message):
     DOG.send_message(
         message.chat.id,
         "~Dog bot barks at " +
-        message.chat.first_name +
+        message.from_user.first_name +
         " welcomingly~"
     )
 
@@ -205,5 +205,4 @@ def version(message):
 
 
 DOG.polling()
-
 
