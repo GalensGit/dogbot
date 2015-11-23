@@ -1,14 +1,16 @@
-import sys
+import os
 
 import telebot
 
 from config import TOKEN
 from version import VERSION, NEW
 
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+IMG_DIR = BASE_DIR + '/images/'
 
 class DogBot(telebot.TeleBot):
     excited = False
-    pets = 0
+    pets = 0    
 
 
 dog = DogBot(TOKEN)
@@ -16,9 +18,12 @@ dog = DogBot(TOKEN)
 
 @dog.message_handler(commands=['start', 'help'])
 def send_welcome(message):
+    import pdb; pdb.set_trace()
     dog.send_message(
         message.chat.id,
-        "~Dog bot barks at " + message.chat.first_name + " welcomingly~"
+        "~Dog bot barks at " +
+        message.chat.first_name +
+        " welcomingly~"
     )
 
 
@@ -28,7 +33,7 @@ def pet(message):
     if dog.pets == 1:
         dog.send_photo(
             message.chat.id,
-            open('images/'+str(dog.pets)+'.png', 'rb')
+            open(IMG_DIR + str(dog.pets)+'.png', 'rb')
         )
         dog.send_message(
             message.chat.id,
@@ -37,7 +42,7 @@ def pet(message):
     elif dog.pets == 2:
         dog.send_photo(
             message.chat.id,
-            open('images/'+str(dog.pets)+'.png', 'rb')
+            open(IMG_DIR + str(dog.pets)+'.png', 'rb')
         )
         dog.send_message(
             message.chat.id,
@@ -46,7 +51,7 @@ def pet(message):
     elif dog.pets == 3:
         dog.send_photo(
             message.chat.id,
-            open('images/'+str(dog.pets)+'.png', 'rb')
+            open(IMG_DIR + str(dog.pets)+'.png', 'rb')
         )
         dog.send_message(
             message.chat.id,
@@ -55,7 +60,7 @@ def pet(message):
     elif dog.pets == 4:
         dog.send_photo(
             message.chat.id,
-            open('images/'+str(dog.pets)+'.png', 'rb')
+            open(IMG_DIR + str(dog.pets)+'.png', 'rb')
         )
         dog.send_message(
             message.chat.id,
@@ -64,7 +69,7 @@ def pet(message):
     elif dog.pets == 5:
         dog.send_photo(
             message.chat.id,
-            open('images/'+str(dog.pets)+'.png', 'rb')
+            open(IMG_DIR + str(dog.pets)+'.png', 'rb')
         )
         dog.send_message(
             message.chat.id,
@@ -73,7 +78,7 @@ def pet(message):
     elif dog.pets == 6:
         dog.send_photo(
             message.chat.id,
-            open('images/'+str(dog.pets)+'.png', 'rb')
+            open(IMG_DIR + str(dog.pets)+'.png', 'rb')
         )
         dog.send_message(
             message.chat.id,
@@ -82,7 +87,7 @@ def pet(message):
     elif dog.pets == 7:
         dog.send_photo(
             message.chat.id,
-            open('images/'+str(dog.pets)+'.png', 'rb')
+            open(IMG_DIR + str(dog.pets)+'.png', 'rb')
         )
         dog.send_message(
             message.chat.id,
@@ -91,7 +96,7 @@ def pet(message):
     elif dog.pets == 8:
         dog.send_photo(
             message.chat.id,
-            open('images/'+str(dog.pets)+'.png', 'rb')
+            open(IMG_DIR + str(dog.pets)+'.png', 'rb')
         )
         dog.send_message(
             message.chat.id,
@@ -100,7 +105,7 @@ def pet(message):
     elif dog.pets == 9:
         dog.send_photo(
             message.chat.id,
-            open('images/'+str(dog.pets)+'.png', 'rb')
+            open(IMG_DIR + str(dog.pets)+'.png', 'rb')
         )
         dog.send_message(
             message.chat.id,
@@ -109,7 +114,7 @@ def pet(message):
     elif dog.pets == 10:
         dog.send_photo(
             message.chat.id,
-            open('images/'+str(dog.pets)+'.png', 'rb')
+            open(IMG_DIR + str(dog.pets)+'.png', 'rb')
         )
         dog.send_message(
             message.chat.id,
@@ -118,7 +123,7 @@ def pet(message):
     elif dog.pets == 11:
         dog.send_photo(
             message.chat.id,
-            open('images/'+str(dog.pets)+'.png', 'rb')
+            open(IMG_DIR + str(dog.pets)+'.png', 'rb')
         )
         dog.send_message(
             message.chat.id,
@@ -127,7 +132,7 @@ def pet(message):
     elif dog.pets == 12:
         dog.send_photo(
             message.chat.id,
-            open('images/'+str(dog.pets)+'.png', 'rb')
+            open(IMG_DIR + str(dog.pets)+'.png', 'rb')
         )
         dog.send_message(
             message.chat.id,
@@ -136,7 +141,7 @@ def pet(message):
     elif dog.pets == 13:
         dog.send_photo(
             message.chat.id,
-            open('images/'+str(dog.pets)+'.png', 'rb')
+            open(IMG_DIR + str(dog.pets)+'.png', 'rb')
         )
         dog.send_message(
             message.chat.id,
@@ -145,7 +150,7 @@ def pet(message):
     elif dog.pets == 14:
         dog.send_photo(
             message.chat.id,
-            open('images/'+str(dog.pets)+'.png', 'rb')
+            open(IMG_DIR + str(dog.pets)+'.png', 'rb')
         )
         dog.send_message(
             message.chat.id,
@@ -154,7 +159,7 @@ def pet(message):
     elif dog.pets == 15:
         dog.send_photo(
             message.chat.id,
-            open('images/'+str(dog.pets)+'.png', 'rb')
+            open(IMG_DIR + str(dog.pets)+'.png', 'rb')
         )
         dog.send_message(
             message.chat.id,
@@ -163,7 +168,7 @@ def pet(message):
     elif dog.pets == 16:
         dog.send_photo(
             message.chat.id,
-            open('images/'+str(dog.pets)+'.png', 'rb')
+            open(IMG_DIR + str(dog.pets)+'.png', 'rb')
         )
         dog.send_message(
             message.chat.id,
