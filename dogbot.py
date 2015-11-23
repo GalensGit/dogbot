@@ -1,9 +1,9 @@
-from config import *
-from version import *
+import sys
+
 import telebot
 
-
-# dog = telebot.TeleBot(TOKEN)
+from config import TOKEN
+from version import VERSION, NEW
 
 
 class DogBot(telebot.TeleBot):
